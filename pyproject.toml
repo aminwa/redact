@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redact"
+version = "0.1.0"
+description = "PII redaction — NER model + LLM, side by side"
+requires-python = ">=3.10"
+dependencies = [
+    "spacy>=3.7",
+    "anthropic>=0.40",
+    "typer>=0.12",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+redact = "redact.cli.main:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
