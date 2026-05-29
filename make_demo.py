@@ -18,7 +18,7 @@ E = "\x1b"
 PROMPT = f"\r\n{E}[1;32muser@demo{E}[0m:{E}[1;34m~/redact{E}[0m$ "
 
 RAW_TEXT = (
-    "Hi, I'm Alice Martin — reach me at alice@company.com\n"
+    "Hi, I'm Alice Martin, reach me at alice@company.com\n"
     "or call 415-555-0192. My SSN is 123-45-6789."
 )
 

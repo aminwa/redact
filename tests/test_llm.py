@@ -64,5 +64,5 @@ def test_llm_multiple_entities():
             {"type": "PERSON", "text": "Bob",         "start": 0,  "end": 3},
             {"type": "EMAIL",  "text": "bob@test.com","start": 12, "end": 24},
         ])
-        ents = LLMEngine().extract("Bob — email: bob@test.com")
+        ents = LLMEngine().extract("Bob, email: bob@test.com")
     assert len(ents) == 2

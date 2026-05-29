@@ -22,7 +22,7 @@
 
 ## What it does
 
-redact strips PII from text using two engines in parallel — a spaCy NER model and Claude — then lets you compare what each one caught.
+redact strips PII from text using two engines in parallel - a spaCy NER model and Claude - then lets you compare what each one caught.
 
 | Engine | How it works |
 |--------|-------------|
@@ -117,7 +117,7 @@ input text
  redacted output
 ```
 
-The `compare` command shows the gap between the two engines — useful for understanding where each approach fails and why.
+The `compare` command shows the gap between the two engines, useful for understanding where each approach fails and why.
 
 ---
 
@@ -131,7 +131,7 @@ redact/
 │   ├── llm.py        Claude extraction engine
 │   └── pipeline.py   merge, dedup, redact, compare
 └── cli/
-    └── main.py       typer CLI — run / scan / compare
+    └── main.py       typer CLI: run / scan / compare
 ```
 
 ---
@@ -143,15 +143,7 @@ pip install -e ".[dev]"
 pytest tests/ -v
 ```
 
-LLM tests run with mocked API calls — no key required.
-
----
-
-## Built by
-
-**AW Labs** — tools that make developers faster.
-
-> "Privacy-first, local-first, fast."
+LLM tests run with mocked API calls, no key required.
 
 ---
 

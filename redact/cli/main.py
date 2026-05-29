@@ -42,7 +42,7 @@ def run(
     mode:   str            = typer.Option("both",  "--mode",   "-m", help=_MODE_HELP),
     style:  str            = typer.Option("label", "--style",  "-s", help=_STYLE_HELP),
 ):
-    """redact PII from text — reads from file or stdin"""
+    """redact PII from text, reads from file or stdin"""
     from redact.core.pipeline import redact
     text = _read(file)
     ner_ents, llm_ents = _engines(text, mode)
@@ -65,7 +65,7 @@ def scan(
     all_ents = sorted(ner_ents + llm_ents, key=lambda e: e.start)
 
     if not all_ents:
-        console.print("[green]clean[/green] — no PII detected")
+        console.print("[green]clean[/green] - no PII detected")
         return
 
     t = Table(box=box.SIMPLE, show_header=True, header_style="bold white", expand=True)
@@ -108,4 +108,4 @@ def compare(
         console.print(Panel(t, title=f"[bold]{label}[/bold]", box=box.ROUNDED))
 
     if not any_found:
-        console.print("[green]clean[/green] — no PII detected")
+        console.print("[green]clean[/green] - no PII detected")
