@@ -118,7 +118,8 @@ def build_cast(cast_path, gif_path):
 
 
 if __name__ == "__main__":
+    here = Path(__file__).parent
     build_cast(
-        "/Users/aminwafi/redact_demo.cast",
-        "/Users/aminwafi/redact/demo.gif",
+        str(here / "redact_demo.cast"),
+        str(here / "demo.gif"),
     )
